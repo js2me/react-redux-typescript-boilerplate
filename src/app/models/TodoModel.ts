@@ -1,9 +1,9 @@
-/** TodoMVC model definitions **/
+/* TodoMVC model definitions */
 
 export interface TodoModel {
-  id: number;
-  text: string;
-  completed: boolean;
+  id: number
+  text: string
+  completed: boolean
 }
 
 export namespace TodoModel {

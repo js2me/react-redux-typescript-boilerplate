@@ -1,11 +1,14 @@
-export function omit<T extends object, K extends keyof T>(target: T, ...omitKeys: K[]): Omit<T, K> {
+export function omit<T extends object, K extends keyof T>(
+  target: T,
+  ...omitKeys: K[]
+): Omit<T, K> {
   return (Object.keys(target) as K[]).reduce(
     (res, key) => {
       if (!omitKeys.includes(key)) {
-        res[key] = target[key];
+        res[key] = target[key]
       }
-      return res;
+      return res
     },
     {} as any
-  );
+  )
 }

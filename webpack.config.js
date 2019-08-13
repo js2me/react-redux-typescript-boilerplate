@@ -24,7 +24,7 @@ module.exports = {
   },
   target: 'web',
   resolve: {
-    extensions: ['.js', '.ts', '.tsx'],
+    extensions: ['.js', '.ts', '.tsx', '.styl'],
     // Fix webpack's default behavior to not load packages with jsnext:main module
     // (jsnext:main directs not usually distributable es6 format, but es6 sources)
     mainFields: ['module', 'browser', 'main'],
@@ -47,7 +47,7 @@ module.exports = {
       },
       // css
       {
-        test: /\.css$/,
+        test: /\.styl$/,
         use: [
           isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
           {
@@ -56,26 +56,11 @@ module.exports = {
               modules: true,
               sourceMap: !isProduction,
               importLoaders: 1,
-              localIdentName: isProduction ? '[hash:base64:5]' : '[local]__[hash:base64:5]'
+              localIdentName: isProduction ? '[hash:base64:4]' : '[local]__[hash:base64:4]'
             }
           },
           {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              plugins: [
-                require('postcss-import')({ addDependencyTo: webpack }),
-                require('postcss-url')(),
-                require('postcss-preset-env')({
-                  /* use stage 2 features (defaults) */
-                  stage: 2
-                }),
-                require('postcss-reporter')(),
-                require('postcss-browser-reporter')({
-                  disabled: isProduction
-                })
-              ]
-            }
+            loader: 'stylus-loader'
           }
         ]
       },
@@ -126,9 +111,10 @@ module.exports = {
         collapseWhitespace: true,
         collapseInlineTagWhitespace: true
       },
-      append: {
-        head: `<script src="//cdn.polyfill.io/v3/polyfill.min.js"></script>`
-      },
+      // not needed. Scripts from cdn for your website ? seriously?
+      // append: {
+      //   head: `<script src="//cdn.polyfill.io/v3/polyfill.min.js"></script>`
+      // },
       meta: {
         title: package.name,
         description: package.description,

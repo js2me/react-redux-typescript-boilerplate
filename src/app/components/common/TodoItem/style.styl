@@ -1,0 +1,83 @@
+.normal .toggle
+  appearance: none
+  /* Mobile Safari */
+  border: none
+  bottom: 0
+  /* auto, since non-WebKit browsers doesn't support input styling */
+  height: auto
+  margin: auto 0
+  position: absolute
+  text-align: center
+  top: 0
+  width: 40px
+
+.normal .toggle:after
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="%23ededed" stroke-width="3"/></svg>')
+
+.normal .toggle:checked:after
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="%23bddad5" stroke-width="3"/><path fill="%235dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>')
+
+.normal
+  label
+    display: block
+    line-height: 1.2
+    margin-left: 45px
+    padding: 15px 60px 15px 15px
+    transition: color .4s
+    white-space: pre-line
+    word-break: break-all
+  .destroy
+    bottom: 0
+    color: #cc9a9a
+    display: none
+    font-size: 30px
+    height: 40px
+    margin: auto 0
+    margin-bottom: 11px
+    position: absolute
+    right: 10px
+    top: 0
+    transition: color .2s ease-out
+    width: 40px
+
+    &:after
+      content: '×'
+
+    &:hover
+      color: #af5b5e
+
+
+.normal .edit
+  display: none
+
+.editing
+  border-bottom: none
+  composes: normal
+  padding: 0
+
+.editing:last-child
+  margin-bottom: -1px
+
+.editing .edit
+  display: block
+  margin: 0 0 0 43px
+  padding: 13px 17px 12px
+  width: 506px
+
+.editing .view
+  display: none
+
+.completed label
+  color: #d9d9d9
+  text-decoration: line-through
+
+/*
+  Hack to remove background from Mobile Safari.
+  Can't use it globally since it destroys checkboxes in Firefox
+*/
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+  .normal .toggle
+    background: none
+
+  .normal .toggle
+    height: 40px
