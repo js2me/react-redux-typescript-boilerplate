@@ -1,15 +1,13 @@
 import { TodoActions } from '@actions/todos'
+import { TodoTextInput } from '@components'
 import * as React from 'react'
-import { TodoTextInput } from '../TodoTextInput'
 
-export namespace Header {
-  export interface Props {
-    addTodo: typeof TodoActions.addTodo
-  }
+export interface Props {
+  addTodo: typeof TodoActions.addTodo
 }
 
-export class Header extends React.Component<Header.Props> {
-  constructor(props: Header.Props, context?: any) {
+export class Header extends React.Component<Props> {
+  constructor(props: Props, context?: any) {
     super(props, context)
     this.handleSave = this.handleSave.bind(this)
   }
