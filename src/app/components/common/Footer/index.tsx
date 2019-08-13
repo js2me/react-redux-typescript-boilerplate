@@ -1,4 +1,4 @@
-import { TodoModel } from 'app/models'
+import { TodoModel } from '@models'
 import * as classNames from 'classnames'
 import * as React from 'react'
 import * as style from './style.styl'

@@ -1,5 +1,5 @@
-import { TodoActions } from 'app/actions'
-import { TodoModel } from 'app/models'
+import { TodoActions } from '@actions'
+import { TodoModel } from '@models'
 import * as classNames from 'classnames'
 import * as React from 'react'
 import { TodoTextInput } from '../TodoTextInput'

@@ -1,4 +1,4 @@
-import { TodoModel } from 'app/models'
+import { TodoModel } from '@models'
 import { createAction } from 'redux-actions'
 
 export namespace TodoActions {

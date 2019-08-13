@@ -1,4 +1,4 @@
-import { TodoActions } from 'app/actions/todos'
+import { TodoActions } from '@actions/todos'
 import * as React from 'react'
 import { TodoTextInput } from '../TodoTextInput'
 

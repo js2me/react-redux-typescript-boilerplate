@@ -1,5 +1,5 @@
-import { logger } from 'app/middleware'
-import { rootReducer, RootState } from 'app/reducers'
+import { logger } from '@middleware'
+import { rootReducer, RootState } from '@reducers'
 import { applyMiddleware, createStore, Store } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
@@ -17,8 +17,8 @@ export function configureStore(initialState?: RootState): Store<RootState> {
   ) as Store<RootState>
 
   if (module.hot) {
-    module.hot.accept('app/reducers', () => {
-      const nextReducer = require('app/reducers')
+    module.hot.accept('@reducers', () => {
+      const nextReducer = require('@reducers')
       store.replaceReducer(nextReducer)
     })
   }

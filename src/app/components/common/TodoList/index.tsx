@@ -1,5 +1,5 @@
-import { TodoActions } from 'app/actions/todos'
-import { TodoModel } from 'app/models/TodoModel'
+import { TodoActions } from '@actions/todos'
+import { TodoModel } from '@models/TodoModel'
 import * as React from 'react'
 import { TodoItem } from '../TodoItem'
 import * as style from './style.styl'

@@ -1,4 +1,4 @@
-import { configureStore } from 'app/store'
+import { configureStore } from '@store'
 import { createBrowserHistory } from 'history'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
