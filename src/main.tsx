@@ -4,7 +4,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { Router } from 'react-router'
-import { App } from './app'
+import { Routes } from './app/components/common/Routes'
 
 // prepare store
 const history = createBrowserHistory()
@@ -13,7 +13,7 @@ const store = configureStore()
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <App />
+      <Routes />
     </Router>
   </Provider>,
   document.getElementById('root')

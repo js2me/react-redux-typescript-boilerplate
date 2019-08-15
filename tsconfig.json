@@ -15,8 +15,6 @@
     "lib": ["es6", "es7", "dom"],
     "baseUrl": "src",
     "paths": {
-      "@app": ["app"],
-      "@app*": ["app*"],
       "@actions": ["app/actions"],
       "@actions*": ["app/actions*"],
       "@components": ["app/components"],
@@ -30,7 +28,11 @@
       "@store": ["app/store"],
       "@store*": ["app/store*"],
       "@utils": ["app/utils"],
-      "@utils*": ["app/utils*"]
+      "@utils*": ["app/utils*"],
+      "@helpers": ["app/helpers"],
+      "@helpers*": ["app/helpers*"],
+      "@assets": ["assets"],
+      "@assets*": ["assets*"]
     }
   },
   "exclude": ["build", "node_modules"]
