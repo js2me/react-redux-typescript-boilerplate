@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var package = require('./package.json');
+const tsconfig = require('./tsconfig.json')
 
 // variables
 var isProduction = process.argv.indexOf('-p') >= 0 || process.env.NODE_ENV === 'production';
@@ -25,12 +26,13 @@ module.exports = {
   target: 'web',
   resolve: {
     extensions: ['.js', '.ts', '.tsx', '.styl'],
-    // Fix webpack's default behavior to not load packages with jsnext:main module
-    // (jsnext:main directs not usually distributable es6 format, but es6 sources)
     mainFields: ['module', 'browser', 'main'],
-    alias: {
-      app: path.resolve(__dirname, 'src/app/')
-    }
+    alias: Object.keys(tsconfig.compilerOptions.paths).reduce((aliases, aliasName) => {
+
+      aliases[aliasName] = path.resolve(__dirname, `src/${tsconfig.compilerOptions.paths[aliasName][0]}`)
+
+      return aliases
+    }, {})
   },
   module: {
     rules: [

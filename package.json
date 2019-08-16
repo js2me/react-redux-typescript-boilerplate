@@ -34,6 +34,7 @@
     "@types/react-dom": "^16.8.0",
     "@types/react-redux": "^7.0.0",
     "@types/react-router": "^4.4.3",
+    "@types/react-router-dom": "^4.3.4",
     "@types/redux-actions": "2.3.1",
     "@types/webpack": "^4.4.23",
     "@types/webpack-env": "1.13.6",
@@ -72,10 +73,10 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "kinka": "^3.0.0-alpha.1",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-redux": "^6.0.0",
-    "react-router": "^4.3.1",
+    "react-router-dom": "^5.0.1",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.4",
     "redux-thunk": "^2.3.0"

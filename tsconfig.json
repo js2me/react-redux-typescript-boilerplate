@@ -16,23 +16,23 @@
     "baseUrl": "src",
     "paths": {
       "@actions": ["app/actions"],
-      "@actions*": ["app/actions*"],
+      "@actions/*": ["app/actions/*"],
       "@components": ["app/components"],
-      "@components*": ["app/components*"],
+      "@components/*": ["app/components/*"],
       "@middleware": ["app/middleware"],
-      "@middleware*": ["app/middleware*"],
+      "@middleware/*": ["app/middleware/*"],
       "@models": ["app/models"],
-      "@models*": ["app/models*"],
+      "@models/*": ["app/models/*"],
       "@reducers": ["app/reducers"],
-      "@reducers*": ["app/reducers*"],
+      "@reducers/*": ["app/reducers/*"],
       "@store": ["app/store"],
-      "@store*": ["app/store*"],
+      "@store/*": ["app/store/*"],
       "@utils": ["app/utils"],
-      "@utils*": ["app/utils*"],
+      "@utils/*": ["app/utils/*"],
       "@helpers": ["app/helpers"],
-      "@helpers*": ["app/helpers*"],
+      "@helpers/*": ["app/helpers/*"],
       "@assets": ["assets"],
-      "@assets*": ["assets*"]
+      "@assets/*": ["assets/*"]
     }
   },
   "exclude": ["build", "node_modules"]

@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { RouteComponentProps } from 'react-router'
-import { Route } from 'react-router'
+import { RouteComponentProps } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 import { Header } from '@components/common/Header'
 import { AboutPage } from '@components/pages/About'
